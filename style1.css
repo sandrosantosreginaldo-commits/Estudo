@@ -1,53 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Cine Catálogo</title>
-    <!-- Adicionei o ?v=3 no final para garantir que o computador da escola não use o cache velho -->
-    <link rel="stylesheet" href="style1.css?v=3">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="Images/logo-cine.png">
-        </div>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Filmes</a></li>
-            <li><a href="#">Gênero</a></li>
-            <li><a href="#">Sobre</a></li>
-        </ul>
-        <div class="pesquisa">
-            <input type="text" placeholder="Pesquisar">
-        </div>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <section class="banner">
-        <img src="Images/banner-principal.png" alt="Banner Principal">
-    </section>
+header {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-    <main class="catalogo">
-        <h2>Filmes em Destaque</h2>
-        
-        <div class="grade-filmes">
-            <!-- Card 1 -->
-            <div class="card">
-                <div class="card-info">
-                    <h3>Batman: O Cavaleiro das Trevas</h3>
-                    <p>Ação / Drama</p>
-                    <a href="#" class="btn-ver-mais">Ver Mais</a>
-                </div>
-            </div>
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+    list-style: none;
+}
 
-            <!-- Card 2 -->
-            <div class="card">
-                <div class="card-info">
-                    <h3>Homem-Aranha</h3>
-                    <p>Ação / Aventura</p>
-                    <a href="#" class="btn-ver-mais">Ver Mais</a>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+header a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalogo {
+    background-color: #141414;
+    color: white;
+    padding: 40px 20px;
+}
+
+.grade-filmes {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.card {
+    background-color: #222222;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.btn-ver-mais {
+    display: inline-block;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-ver-mais:hover {
+    background-color: #cc0000;
+}
